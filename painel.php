@@ -8,7 +8,7 @@ include 'conexao.php';
 
 $mensagem = "";
 
-// Processar o cadastro de novo item (Create)
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cadastrar'])) {
     $nome_item = $_POST['nome_item'];
     $categoria = $_POST['categoria'];
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cadastrar'])) {
     }
 }
 
-// Buscar itens para listagem (Read)
+
 $resultado_cardapio = mysqli_query($conexao, "SELECT * FROM cardapio ORDER BY id DESC");
 ?>
 <!DOCTYPE html>

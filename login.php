@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $resultado = mysqli_stmt_get_result($stmt);
 
     if ($user = mysqli_fetch_assoc($resultado)) {
-        // Compatível com a senha em texto plano do script SQL padrão ('admin123')
+       
         if ($senha_input === $user['senha']) {
             $_SESSION['usuario_id'] = $user['id'];
             $_SESSION['usuario_nome'] = $user['nome'];

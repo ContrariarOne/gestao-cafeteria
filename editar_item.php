@@ -9,7 +9,7 @@ include 'conexao.php';
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 $mensagem = "";
 
-// Processar a atualização (Update)
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome_item = $_POST['nome_item'];
     $categoria = $_POST['categoria'];
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-// Buscar dados atuais do item
+
 $sql = "SELECT * FROM cardapio WHERE id = ?";
 $stmt = mysqli_prepare($conexao, $sql);
 mysqli_stmt_bind_param($stmt, "i", $id);
